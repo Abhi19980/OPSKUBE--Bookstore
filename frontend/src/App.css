@@ -1,0 +1,79 @@
+body {
+  background-color: #14a78f;
+}
+
+.loader {
+  border: 6px solid #aaa;
+  border-top: 6px solid #333;
+  border-left: 6px solid #333;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+#userItemList {
+  visibility: hidden;
+}
+
+#userItemListLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: #3f51b5;
+  color: #fff;
+  height: 2.5rem;
+  box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.397);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+i {
+  font-style: normal;
+  /* align-self: flex-start; */
+}
+
+#btnupload {
+  z-index: 0;
+  display: flex;
+  align-items: center;
+}
+
+#userItemListLabel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 4px 1px rgba(0, 0, 0, 0.397),
+    1px 3px 4px 1px rgba(0, 0, 0, 0.397), -1px 6px 4px 1px rgba(0, 0, 0, 0.397);
+}
+#userItemListLabel:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+table {
+  margin: 2rem;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 1rem 2rem;
+}
